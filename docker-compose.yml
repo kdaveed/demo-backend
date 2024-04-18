@@ -1,0 +1,33 @@
+version: '3'
+
+
+services:
+  postgres: 
+    build:
+      context: .
+      dockerfile: DockerfilePostgres
+
+    ports:
+      - "5432:5432"
+
+    environment: 
+      POSTGRES_DB: initialdatabase
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+  # service:
+  #   build: 
+  #     context: .
+  #     dockerfile: DockerfileNest
+
+  #   environment: 
+  #     POSTGRES_DB: initialdatabase
+  #     POSTGRES_USER: postgres
+  #     POSTGRES_PASSWORD: postgres
+
+  #   volumes:
+  #     - /usr/app/node_modules
+
+  #   ports:
+  #     - "3000:3000"
+    
