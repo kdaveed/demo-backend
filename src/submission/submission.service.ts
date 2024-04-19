@@ -18,6 +18,9 @@ export class SubmissionService {
   async getSubmissions() {
     return this.repo.find({
       relations: ['test'],
+      order: {
+        createdAt: 'DESC',
+      },
     });
   }
 }

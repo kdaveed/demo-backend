@@ -7,13 +7,6 @@ export class AppController {
 
   @Get()
   getHello(): string {
-    
     return this.appService.getHello();
-  }
-  
-  @Get('homedata')
-  async xgetHello() {
-    await new Promise(res => setTimeout(res, 1_500)); 
-    return 'yoooo';
   }
 }

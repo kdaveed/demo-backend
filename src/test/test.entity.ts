@@ -12,4 +12,8 @@ export class Test {
 
   @OneToMany(() => Submission, submission => submission.test)
   submissions: Submission[];
+
+  @Column({ type: 'jsonb', nullable: true })
+  questions: Array<{ name: string, answers: string[] }>
+
 }

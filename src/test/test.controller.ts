@@ -18,6 +18,7 @@ export class TestController {
 
   @Get('')
   async getTests() {
+    await new Promise(res => setTimeout(res, 2_000));
     return this.service.getTests();
   } 
 
